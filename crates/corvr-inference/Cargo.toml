@@ -1,0 +1,18 @@
+[package]
+name = "corvr-inference"
+description = "Trackers that turn camera frames into face state, plus ONNX model loading."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[features]
+default = []
+# ONNX Runtime through the ort crate.
+onnx = ["dep:ort", "dep:ndarray"]
+
+[dependencies]
+corvr-core.workspace = true
+thiserror.workspace = true
+ort = { workspace = true, optional = true }
+ndarray = { workspace = true, optional = true }

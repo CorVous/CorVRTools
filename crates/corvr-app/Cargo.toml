@@ -1,0 +1,25 @@
+[package]
+name = "corvr-app"
+description = "The CorVRTools face tracking app."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "corvrtools"
+path = "src/main.rs"
+
+[features]
+default = []
+camera = ["corvr-capture/camera"]
+onnx = ["corvr-inference/onnx"]
+
+[dependencies]
+corvr-core.workspace = true
+corvr-capture.workspace = true
+corvr-inference.workspace = true
+corvr-osc.workspace = true
+anyhow.workspace = true
+log.workspace = true
+env_logger.workspace = true

@@ -1,0 +1,23 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+publish = false
+
+[workspace.dependencies]
+corvr-core = { path = "crates/corvr-core" }
+corvr-capture = { path = "crates/corvr-capture" }
+corvr-inference = { path = "crates/corvr-inference" }
+corvr-osc = { path = "crates/corvr-osc" }
+anyhow = "1"
+thiserror = "2"
+log = "0.4"
+env_logger = "0.11"
+rosc = "0.11"
+nokhwa = { version = "0.10", features = ["input-native"] }
+ort = "=2.0.0-rc.15"
+ndarray = "0.17"
