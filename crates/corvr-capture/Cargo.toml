@@ -1,0 +1,17 @@
+[package]
+name = "corvr-capture"
+description = "Camera frame sources (Beyond 2e eye cameras, Babble mouth camera)."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[features]
+default = []
+# Real cameras through nokhwa (Media Foundation on Windows).
+camera = ["dep:nokhwa"]
+
+[dependencies]
+corvr-core.workspace = true
+thiserror.workspace = true
+nokhwa = { workspace = true, optional = true }

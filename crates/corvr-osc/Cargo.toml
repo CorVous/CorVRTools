@@ -1,0 +1,12 @@
+[package]
+name = "corvr-osc"
+description = "Sends face state to VRChat over OSC using VRCFaceTracking v2 parameter names."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+corvr-core.workspace = true
+rosc.workspace = true
+thiserror.workspace = true
